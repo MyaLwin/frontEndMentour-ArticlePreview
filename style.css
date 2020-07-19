@@ -16,17 +16,29 @@
 */
 
 
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+
+
 body {
-    background-color:hsl(212, 23%, 69%);
+    background-color:hsla(212, 23%, 69%, 0.5);
     font-family: 'Manrope', sans-serif;
     font-size: 13px;
 } 
 
+
 .container {
     margin: 200px  auto; 
+    display: -webkit-box; 
+    display: -ms-flexbox; 
     display: flex; 
     max-width : 730px; 
-    min-height : 280px; 
+    height : 280px; 
     background-color: hsl(210, 46%, 95%);
     border-radius: 10px; 
     /* align-items: center; */
@@ -34,8 +46,11 @@ body {
 
 .container div.col-1 div.image {
     
-    min-height: 280px;
-    flex-basis: 280px;
+    height: 280px;
+    -ms-flex-preferred-size: 280px;
+        flex-basis: 280px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex; 
 }
 
@@ -43,22 +58,33 @@ body {
    
     max-height: 100%; 
     max-width: 280px;
-    object-position: left;
-    object-fit: cover; 
+    -o-object-position: left;
+       object-position: left;
+    -o-object-fit: cover;
+       object-fit: cover; 
     border-radius: 10px 0 0 10px;
     
 }
 
 .container div.col-2 {
-    flex-grow: 5;
+    -webkit-box-flex: 5;
+        -ms-flex-positive: 5;
+            flex-grow: 5;
     padding: 18px 50px 10px 40px; 
+    color: hsl(217, 19%, 35%);
+    overflow: auto;
 }
 
 .col-2 div.author {
     width: 200px; 
+    display : -webkit-box; 
+    display : -ms-flexbox; 
     display : flex; 
-    justify-content: left;
+    -webkit-box-pack: left; 
+        -ms-flex-pack: left; 
+            justify-content: left;
     margin-top: 20px;
+    color: hsl(217, 19%, 35%);
 
 }
 
@@ -69,18 +95,62 @@ div.author div:first-of-type {
     padding: 1px; 
     margin: 1px; 
     font-size: 13px;
+    
 }
 .col-2 p {
     padding: 1px; 
     margin: 1px; 
     font-size: 13px;
+    font-weight: 400; 
 }
 
 .col-2 img {
-    max-height: 100%; 
+    height: 40px;
     max-width: 40px;
-    object-position: left;
-    object-fit: cover; 
+    -o-object-position: left;
+       object-position: left;
+    -o-object-fit: cover;
+       object-fit: cover; 
     border-radius: 100%;
 } 
+
+.links img {
+    box-sizing: border-box;
+    background-color: hsla(212, 23%, 69%, 0.3);
+    width: 35px; 
+    height: 35px; 
+    padding: 8px; 
+    object-fit: contain;
+}
+
+.links img:hover {
+    background-color: hsl(212, 23%, 69%);
+
+}
+
+.col-2 div.linksBar {
+    box-sizing: border-box;
+    bottom: 100px; 
+    width : 200px; 
+    height : 50px; 
+    justify-content: space-between;
+    background-color: hsl(217, 19%, 35%);
+    padding: 10px; 
+    border-radius: 10px;
+    transition: all .5s .3s;
+    color: hsl(212, 23%, 69%);
+    padding-top: 15px; 
+}
+.appear {
+    opacity: 1; 
+}
+.disappear {
+    opacity: 0; 
+}
+
+.linksBar a img {
+    width: 20px;  
+    height: 20px; 
+}
+
 

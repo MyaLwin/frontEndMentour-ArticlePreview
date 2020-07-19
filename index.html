@@ -9,31 +9,68 @@
     <script src="https://kit.fontawesome.com/ea7a226074.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    
-    <div class="container">
-        <div class="col-1">
-             <div class="image">
-                <img src="images/drawers.jpg" alt="">
+
+    <div class="row">
+        <div class="container">
+            <div class="col-1">
+                <div class="image">
+                    <img src="images/drawers.jpg" alt="">
+                </div>
             </div>
-        </div>
-        <div class="col-2">
-            <h2>Shift the overall look and feel by adding these wonderful 
-                touches to furniture in your home</h2>
-            <p>Ever been in a room and felt like something was missing? Perhaps 
-                it felt slightly bare and uninviting. I’ve got some simple tips 
-                to help you make any room feel complete.</p>
-            <div class="author">
-                <img src="images/avatar-michelle.jpg" alt="Michelle Appleton Picture">
-                <div>
-                    <h3>Michelle Appleton</h3>
-                    <p>28 Jun 2020</p>
+            <div class="col-2">
+                <h2>Shift the overall look and feel by adding these wonderful 
+                    touches to furniture in your home</h2>
+                <p>Ever been in a room and felt like something was missing? Perhaps 
+                    it felt slightly bare and uninviting. I’ve got some simple tips 
+                    to help you make any room feel complete.</p>
+                <div class="author">
+                    <img src="images/avatar-michelle.jpg" alt="Michelle Appleton Picture">
+                    <div>
+                        <h3>Michelle Appleton</h3>
+                        <p>28 Jun 2020</p>
+                    </div>
+                    
                 </div>
                 
-            </div>    
+                <div class="links">
+                    <img id="links" src="images/icon-share.svg" alt="">
+                </div>   
+
+                <div class="linksBar" style="display:none;">
+                    <p>S H A R E</p> 
+                    <a href="https://www.facebook.com"><img src="images/icon-facebook.svg" alt=""></a>
+                    <a href="https://www.twitter.com"><img src="images/icon-twitter.svg" alt=""></a>
+                    <a href="https://www.pinterest.com"><img src="images/icon-pinterest.svg" alt=""></a>
+                    
+                </div> 
+            </div>
+        
         </div>
 
+        
     </div>
 
+    <script>
+        let links = document.querySelector('#links'); 
+        let linksBar = document.querySelector('.linksBar');
+        links.addEventListener('click', function() {
+
+                linksBar.style.display ='flex'
+                linksBar.classList.remove('disappear')
+                linksBar.classList.add('appear')           
+            });
+
+        linksBar.addEventListener('mouseleave', function() {
+
+                linksBar.classList.remove('appear')
+                linksBar.classList.add('disappear')
+                setTimeout(function() {
+                   linksBar.style.display = 'none'
+                }, 1000);
+        });
+
+
+    </script>
 
 </body>
 </html>
