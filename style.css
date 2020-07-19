@@ -1,13 +1,86 @@
 /*
- 
+
+## Colors
 - Very Dark Grayish Blue: hsl(217, 19%, 35%)
 - Desaturated Dark Blue: hsl(214, 17%, 51%)
 - Grayish Blue: hsl(212, 23%, 69%)
-- Light Grayish Blue: hsl(210, 46%, 95%) 
+- Light Grayish Blue: hsl(210, 46%, 95%)
+
+## The designs were created to the following widths:
+- Mobile: 375px
+- Desktop: 1440px
+
+### Body Copy
+- Font size: 13px
 
 */
+
 
 body {
     background-color:hsl(212, 23%, 69%);
     font-family: 'Manrope', sans-serif;
+    font-size: 13px;
 } 
+
+.container {
+    margin: 200px  auto; 
+    display: flex; 
+    max-width : 730px; 
+    min-height : 280px; 
+    background-color: hsl(210, 46%, 95%);
+    border-radius: 10px; 
+    /* align-items: center; */
+}
+
+.container div.col-1 div.image {
+    
+    min-height: 280px;
+    flex-basis: 280px;
+    display: flex; 
+}
+
+.col-1 img {
+   
+    max-height: 100%; 
+    max-width: 280px;
+    object-position: left;
+    object-fit: cover; 
+    border-radius: 10px 0 0 10px;
+    
+}
+
+.container div.col-2 {
+    flex-grow: 5;
+    padding: 18px 50px 10px 40px; 
+}
+
+.col-2 div.author {
+    width: 200px; 
+    display : flex; 
+    justify-content: left;
+    margin-top: 20px;
+
+}
+
+div.author div:first-of-type {
+    margin-left: 15px;
+}
+.col-2 h3 {
+    padding: 1px; 
+    margin: 1px; 
+    font-size: 13px;
+}
+.col-2 p {
+    padding: 1px; 
+    margin: 1px; 
+    font-size: 13px;
+}
+
+.col-2 img {
+    max-height: 100%; 
+    max-width: 40px;
+    object-position: left;
+    object-fit: cover; 
+    border-radius: 100%;
+} 
+
