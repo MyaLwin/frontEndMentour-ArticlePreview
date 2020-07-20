@@ -31,12 +31,17 @@ body {
     font-size: 13px;
 } 
 
-
-.container {
+.row {
     margin: 200px  auto; 
-    display: flex; 
     max-width : 730px; 
     min-height : 280px; 
+    position: relative;
+}
+
+.container {
+    
+    width:100%; 
+    display: flex; 
     background-color: hsl(210, 46%, 95%);
     border-radius: 10px; 
 }
@@ -44,14 +49,17 @@ body {
 /***********COL 1 IMAGE*************/
 
 .container div.col-1 div.image {
-   
-    height: 100%; 
+    
+    flex-basis: 280px;
     display: flex;
+    height: 100%;  
+   
 }
 
 .col-1 img {
-   
-    max-width: 280px;
+    
+    display: flex;
+    width: 100%; 
     object-position: left;
     object-fit: cover; 
     border-radius: 10px 0 0 10px;
@@ -60,10 +68,11 @@ body {
 /****** COL 2 ************/
 
 .container div.col-2 {
-  
+    
     padding: 4% 50px 10px 40px; 
     color: hsl(217, 19%, 35%);
-}
+    position: relative; 
+ }
 
 .col-2 h2 {
     margin-top: 0; 
@@ -125,24 +134,42 @@ div.author div:first-of-type {
 }
 
 /******* POPUP LINKS BAR ***********/
-.col-2 div.linksBar {
+
+.linksBar {
     box-sizing: border-box;
+    display: flex; 
     bottom: 100px; 
     width : 200px; 
     height : 50px; 
-    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute; 
+    bottom : 80px; 
+    right: -32px; 
     background-color: hsl(217, 19%, 35%);
     padding: 10px; 
     border-radius: 10px;
     transition: all .5s .3s;
     color: hsl(212, 23%, 69%);
-    padding-top: 15px; 
+    /* padding-top: 15px;  */
+}
+
+.linksBar::after {
+    content:"";
+    position: absolute;
+    top:100%; 
+    left: 50%; 
+    margin-left: -10px; 
+    border-width: 10px;
+    border-style: solid; 
+    border-color: hsl(217, 19%, 35%) transparent transparent transparent; 
+}
 }
 .appear {
     opacity: 1; 
 }
 .disappear {
-    opacity: 0; 
+   opacity: 0;
 }
 
 .linksBar a img {
