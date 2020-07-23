@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Article Preview</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/ea7a226074.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -16,26 +16,29 @@
     <div class="row">
         <div class="container">
             <div class="col-1">
-                <div class="image">
-                    <img src="images/drawers.jpg" alt="">
+                <div class="col-1_image_container">
+                     <img class="col-1_image_img" src="images/drawers.jpg" alt="">
                 </div>
             </div>
             <div class="col-2">
-                <h2>Shift the overall look and feel by adding these wonderful 
+                <h2 class="col-2__headline" >Shift the overall look and feel by adding these wonderful 
                     touches to furniture in your home</h2>
-                <p>Ever been in a room and felt like something was missing? Perhaps 
+                <p class="col-2__paragraph">Ever been in a room and felt like something was missing? Perhaps 
                     it felt slightly bare and uninviting. I’ve got some simple tips 
                     to help you make any room feel complete.</p>
-                <div class="author">
-                    <img class="author-image" src="images/avatar-michelle.jpg" alt="Michelle Appleton Picture">
-                    <div>
-                        <h3>Michelle Appleton</h3>
-                        <p>28 Jun 2020</p>
+                <div class="col-2__author-box">
+                    <img class="col-2__author-box-image" src="images/avatar-michelle.jpg" alt="Michelle Appleton Picture">
+                    <div class="col-2__author-box-info">
+                        <h3 class="col-2__author-box-h3">Michelle Appleton</h3>
+                        <p class="col-2__author-box-date">28 Jun 2020</p>
                     </div>
-                    <img id="links" src="images/icon-share.svg" alt="">
+                    <div class="col-2__author-box-share">
+                        <img class="col-2__author-box-share-image" src="images/icon-share.svg" alt="">
+                    </div>
+                    
 
                 </div>
-                <div class="linksBar" style="display:none;">
+                <div class="col-2__links-bar" style="display:none;">
                         <p>S H A R E</p> 
                         <a href="https://www.facebook.com"><img src="images/icon-facebook.svg" alt=""></a>
                         <a href="https://www.twitter.com"><img src="images/icon-twitter.svg" alt=""></a>
@@ -48,27 +51,11 @@
         
         
 
-        <h1>hello world</h1>
-        <h1>hello world</h1>
-        <h1>hello world</h1>
-        <h1>hello world</h1>
-        <h1>hello world</h1>
-        <h1>hello world</h1>
-        <h1>hello world</h1>
-        <h1>hello world</h1>
-        <h1>hello world</h1>
-        <h1>hello world</h1>
-        <h1>hello world</h1>
-        <h1>hello world</h1>
-        <h1>hello world</h1>
-        <h1>hello world</h1>
-        <h1>hello world</h1>
-        <h1>hello world</h1>
-        <h1>hello world</h1>
+   
 
 
     </div>
-
+<!-- 
     <script>
         let links = document.querySelector('#links'); 
         let linksBar = document.querySelector('.linksBar');
@@ -89,7 +76,7 @@
         });
 
 
-    </script>
+    </script> -->
 
 </body>
 </html>
