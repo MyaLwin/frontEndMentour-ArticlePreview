@@ -32,19 +32,23 @@
                         <h3 class="col-2__author-box-h3">Michelle Appleton</h3>
                         <p class="col-2__author-box-date">28 Jun 2020</p>
                     </div>
-                    <div class="col-2__author-box-share">
+                    <div class="col-2__author-box-share" id="links">
                         <img class="col-2__author-box-share-image" src="images/icon-share.svg" alt="">
                     </div>
+
+                    <div class="col-2__links-bar disappear opacity-0" id="linksBar">
+                        <p class="col-2__links-bar-paragraph">S H A R E</p> 
+                        <div class="col-2__links-bar-images">
+                            <a href="https://www.facebook.com"><img class="col-2__links-bar-image" src="images/icon-facebook.svg" alt=""></a>
+                            <a href="https://www.twitter.com"><img class="col-2__links-bar-image" src="images/icon-twitter.svg" alt=""></a>
+                            <a href="https://www.pinterest.com"><img class="col-2__links-bar-image"src="images/icon-pinterest.svg" alt=""></a>
+                        </div>
+                       
+                    </div> 
                     
 
                 </div>
-                <div class="col-2__links-bar" style="display:none;">
-                        <p>S H A R E</p> 
-                        <a href="https://www.facebook.com"><img src="images/icon-facebook.svg" alt=""></a>
-                        <a href="https://www.twitter.com"><img src="images/icon-twitter.svg" alt=""></a>
-                        <a href="https://www.pinterest.com"><img src="images/icon-pinterest.svg" alt=""></a>
-                        
-                </div> 
+               
             </div>
             
         </div>
@@ -55,28 +59,28 @@
 
 
     </div>
-<!-- 
+
     <script>
         let links = document.querySelector('#links'); 
-        let linksBar = document.querySelector('.linksBar');
+        let linksBar = document.querySelector('#linksBar');
         links.addEventListener('click', function() {
-                
-                linksBar.style.display ='flex'
                 linksBar.classList.remove('disappear')
-                linksBar.classList.add('appear')           
+                linksBar.classList.add('appear') 
+                linksBar.classList.remove('opacity-0')
+                linksBar.classList.add('opacity-1')     
+           
+                    
             });
-
         linksBar.addEventListener('mouseleave', function() {
-
+                linksBar.classList.remove('opacity-1')
+                linksBar.classList.add('opacity-0') 
+            setTimeout(function() {
                 linksBar.classList.remove('appear')
                 linksBar.classList.add('disappear')
-                setTimeout(function() {
-                   linksBar.style.display = 'none'
-                }, 1000);
+            },1000)
+               
         });
-
-
-    </script> -->
+    </script>
 
 </body>
 </html>
